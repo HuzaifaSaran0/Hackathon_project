@@ -1,43 +1,213 @@
 {% extends 'base.html' %}
 
-{% block title %}Home | My App{% endblock %}
+{% block title %}Home | AgriRises PK{% endblock %}
 
 {% block content %}
-<div class="container mt-5">
-    <div class="text-center">
-        <h1>Welcome to My App</h1>
-        <p class="lead">This is a simple, clean, and responsive homepage created using Django and Bootstrap.</p>
-    </div>
+<style>
+    body {
+        background: linear-gradient(to bottom, #a8e063, #56ab2f);
+        color: #fff;
+        font-family: 'Arial', sans-serif;
+    }
 
-    <!-- Example Section -->
-    <div class="row mt-5">
-        <div class="col-md-4 mb-4">
-            <div class="card h-100">
-                <img src="https://via.placeholder.com/350x200" class="card-img-top" alt="Feature 1">
-                <div class="card-body">
-                    <h5 class="card-title">Feature One</h5>
-                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                </div>
+    .hero {
+        text-align: center;
+        padding: 100px 20px;
+        background: url('https://www.agriculture.com/sites/default/files/styles/amp_1200px_630px/public/2021-02/cover_crop_impact.jpg') no-repeat center center/cover;
+        border-radius: 10px;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    .hero h1 {
+        font-size: 3rem;
+        font-weight: bold;
+        margin-bottom: 20px;
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    }
+
+    .hero p {
+        font-size: 1.2rem;
+        margin-bottom: 30px;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+    }
+
+    .hero .btn {
+        padding: 12px 30px;
+        font-size: 1.1rem;
+        background-color: #1b3015;
+        color: #fff;
+        text-transform: uppercase;
+        font-weight: bold;
+        border-radius: 25px;
+        transition: 0.3s;
+    }
+
+    .hero .btn:hover {
+        background-color: #4bcc1c;
+        color: #fff;
+        transform: translateY(-2px);
+    }
+
+    .section {
+        padding: 50px 20px;
+        text-align: center;
+    }
+
+    .section h2 {
+        color: #ffffff;
+        font-size: 2rem;
+        margin-bottom: 20px;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    }
+
+    .section p {
+        color: #f0f0f0;
+        font-size: 1rem;
+        margin-bottom: 30px;
+    }
+
+    .section.light {
+        background: transparent;
+        color: #333;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .section.light h2 {
+        color: #ffffff;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+        
+    }
+    
+
+
+    .cards-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+        margin-top: 30px;
+    }
+
+    .card {
+        background: #ffffff;
+        border-radius: 10px;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        width: 500px;
+        text-align: left;
+        transition: transform 0.3s;
+    }
+
+    .card:hover {
+        transform: translateY(-5px);
+    }
+    .card p{
+        color: #68a24d;
+
+    }
+
+    .card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+    }
+
+    .card-body {
+        padding: 15px;
+    }
+
+    .card-title {
+        color: #56ab2f;
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+    }
+
+    .card-text {
+        color: #555;
+        font-size: 1rem;
+    }
+
+    .footer {
+        text-align: center;
+        padding: 20px;
+        background: #333;
+        color: #fff;
+        font-size: 0.9rem;
+        margin-top: 30px;
+    }
+</style>
+
+<div class="hero">
+    <h1>Welcome to AgriRise PAKISTAN</h1>
+    <p>Your one-stop hub for all the latest articles and blogs in the agriculture field, gathered from top resources across the web.</p>
+    <a href="{% url 'blog_list' %}" class="btn">Explore Blogs</a>
+</div>
+
+<!-- Section 1: Latest Articles -->
+<div class="section">
+    <h2>Latest Agricultural News</h2>
+    <p>Stay up to date with the latest developments in agriculture, farming technology, and market trends.</p>
+    <div class="cards-container">
+        <div class="card">
+            <img src="https://media.istockphoto.com/id/1306713348/photo/drone-in-soybean-crop.jpg?s=612x612&w=0&k=20&c=D-3Qud3HszLdfg_Q4mB9TQRetM1W3S-aIZwKHQd3DTg=" alt="Latest News">
+            <div class="card-body">
+                <h5 class="card-title">The Future of Corn Farming</h5>
+                <p class="card-text">Explore the impact of technology on increasing yields and sustainability.</p>
             </div>
         </div>
-        <div class="col-md-4 mb-4">
-            <div class="card h-100">
-                <img src="https://via.placeholder.com/350x200" class="card-img-top" alt="Feature 2">
-                <div class="card-body">
-                    <h5 class="card-title">Feature Two</h5>
-                    <p class="card-text">Curabitur vel ligula sit amet lacus cursus facilisis.</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4 mb-4">
-            <div class="card h-100">
-                <img src="https://via.placeholder.com/350x200" class="card-img-top" alt="Feature 3">
-                <div class="card-body">
-                    <h5 class="card-title">Feature Three</h5>
-                    <p class="card-text">Phasellus fermentum justo et risus vehicula, vitae feugiat eros pharetra.</p>
-                </div>
+        <div class="card">
+            <img src="https://t4.ftcdn.net/jpg/04/32/37/15/360_F_432371599_jRpqfLtpzX2t4evliTSIBwpELQ9XAy6k.jpg" alt="Technology in Agriculture">
+            <div class="card-body">
+                <h5 class="card-title">Smart Farming Tools</h5>
+                <p class="card-text">Learn how smart tractors and drones are revolutionizing farming methods.</p>
             </div>
         </div>
     </div>
 </div>
+
+<!-- Section 2: Expert Tips -->
+<div class="section light">
+    <h2>Expert Farming Tips</h2>
+    <p>Get advice from industry experts on improving your farm's productivity and sustainability.</p>
+    <div class="cards-container">
+        <div class="card">
+            <img src="https://media.istockphoto.com/id/1414242877/photo/a-meat-or-dairy-farmer-giving-food-to-brown-cows-on-a-cow-farm-in-a-countryside-man-taking.jpg?s=612x612&w=0&k=20&c=ow27m2XDWXafLeHJy59gZKqd4uYkNk-YlKUziSrZIb8=" alt="Cattle Farming">
+            <div class="card-body">
+                <h5 class="card-title">Cattle Care Basics</h5>
+                <p class="card-text">Tips on how to ensure your livestock stays healthy and happy.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://img.freepik.com/free-photo/beautiful-sunflowers-outdoors-still-life_23-2150152761.jpg" alt="Crop Management">
+            <div class="card-body">
+                <h5 class="card-title">Sunflower Farming Guide</h5>
+                <p class="card-text">Maximize your crop yield with these easy-to-follow tips.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Section 3: Sustainable Practices -->
+<div class="section">
+    <h2>Promoting Sustainable Agriculture</h2>
+    <p>Discover innovative methods to reduce waste, conserve resources, and ensure a greener future.</p>
+    <div class="cards-container">
+        <div class="card">
+            <img src="https://www.tractorjunction.com/blog/wp-content/uploads/2023/07/Methods-of-Soil-Conservation-.jpg" alt="Conservation">
+            <div class="card-body">
+                <h5 class="card-title">Soil Conservation Techniques</h5>
+                <p class="card-text">Practical tips for preserving soil quality and fertility over time.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://media.istockphoto.com/id/529101533/photo/water-conservation-in-europe-water-globe-in-the-hands.jpg?s=612x612&w=0&k=20&c=2sjCPSmivry5EL3FJ11l45wu4us5Q5CZrl-F779-ok0=" alt="Water Management">
+            <div class="card-body">
+                <h5 class="card-title">Efficient Water Usage</h5>
+                <p class="card-text">Learn about irrigation systems that save water and boost efficiency.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
 {% endblock %}

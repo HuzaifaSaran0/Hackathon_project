@@ -1,20 +1,135 @@
 {% extends 'base.html' %}
 
-{% block title %}Login - My App{% endblock %}
+{% block title %}About | AgriRises{% endblock %}
 
 {% block content %}
-<div class="form-container mx-auto" style="max-width: 400px; background: rgba(255, 255, 255, 0.9); border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); padding: 20px 40px;">
-    <h1 class="text-center" style="color: #4CAF50;">Login</h1>
-    <form>
-        <input type="email" class="form-control my-2" placeholder="Email Address" required>
-        <input type="password" class="form-control my-2" placeholder="Password" required>
-        <button type="submit" class="btn btn-success w-100 mt-3">Login</button>
-    </form>
-    <p class="text-center mt-3">
-        Don't have an account? <a href="/signup" style="color: #4CAF50;">Sign Up</a>
-    </p>
-    <p class="text-center">
-        <a href="#" style="color: #4CAF50;">Forgot Password?</a>
-    </p>
+<style>
+    body {
+        background: linear-gradient(to bottom, #a8e063, #56ab2f);
+        color: #fff;
+        font-family: 'Arial', sans-serif;
+    }
+
+    .section {
+        padding: 50px 20px;
+        text-align: center;
+    }
+
+    .section h2, .section h3 {
+        color: #fff;
+        font-size: 2rem;
+        margin-bottom: 20px;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    }
+
+    .section p, .section li {
+        color: #252222ad;
+        font-size: 1.1rem;
+        line-height: 1.8;
+    }
+
+    .section ul {
+        list-style: none;
+        padding-left: 0;
+    }
+
+    .section ul li {
+        margin: 10px 0;
+    }
+
+    .section ul i {
+        color: #4CAF50;
+        margin-right: 10px;
+    }
+
+    .card {
+        background-color: #84cb64;
+        border-radius: 10px;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        margin: 20px auto;
+        width: 80%;
+        max-width: 800px;
+        text-align: left;
+    }
+
+    .card h3 {
+        color: #4CAF50;
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+    }
+
+    .card p {
+        color: #555;
+        font-size: 1.1rem;
+    }
+
+    .hero {
+        text-align: center;
+        padding: 80px 20px;
+        background: url('https://www.agriculture.com/sites/default/files/styles/amp_1200px_630px/public/2021-02/cover_crop_impact.jpg') no-repeat center center/cover;
+        border-radius: 10px;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    .hero h1 {
+        font-size: 3rem;
+        font-weight: bold;
+        margin-bottom: 20px;
+        color: #fff;
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    }
+
+    .hero p {
+        font-size: 1.2rem;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+    }
+</style>
+
+<!-- Hero Section -->
+<div class="hero">
+    <h1>About AgriRises</h1>
+    <p>Promoting sustainable agriculture through innovation and community collaboration.</p>
+</div>
+
+<!-- About Section -->
+<div class="section">
+    <div class="card">
+        <h3>Who We Are</h3>
+        <p>
+            AgriRises is dedicated to promoting sustainable agriculture through knowledge sharing, innovation, and community engagement. Our platform serves as a hub for farmers, experts, and enthusiasts to exchange ideas, learn new techniques, and drive positive change in the agricultural industry.
+        </p>
+    </div>
+
+    <div class="card">
+        <h3>Our Mission</h3>
+        <p>
+            Our mission is to empower farmers with the resources, knowledge, and tools needed to cultivate sustainable agricultural practices. AgriRises is working towards creating a world where agriculture flourishes while maintaining harmony with nature.
+        </p>
+    </div>
+
+    <div class="card">
+        <h3>What We Offer</h3>
+        <ul>
+            <li><i class="fas fa-seedling"></i> Expert advice on sustainable farming practices</li>
+            <li><i class="fas fa-tractor"></i> Insights into modern farming technology and tools</li>
+            <li><i class="fas fa-leaf"></i> Tips for reducing environmental impact and improving yields</li>
+            <li><i class="fas fa-users"></i> A community space to connect with like-minded farmers and experts</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h3>Why AgriRises?</h3>
+        <p>
+            AgriRises is more than just a resource—it’s a community. We aim to build a support system where farmers can share knowledge, experiences, and advice. We understand the challenges of modern agriculture, and we’re here to help farmers thrive while preserving the planet.
+        </p>
+    </div>
+
+    <div class="card">
+        <h3>Join Us Today!</h3>
+        <p>
+            Explore our growing library of articles, share your experiences, and become part of a vibrant agricultural community that values both progress and sustainability.
+        </p>
+    </div>
 </div>
 {% endblock %}
