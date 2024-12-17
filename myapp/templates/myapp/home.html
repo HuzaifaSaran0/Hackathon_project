@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block title %}Home | My App{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="text-center">
+        <h1>Welcome to My App</h1>
+        <p class="lead">This is a simple, clean, and responsive homepage created using Django and Bootstrap.</p>
+    </div>
+
+    <!-- Example Section -->
+    <div class="row mt-5">
+        <div class="col-md-4 mb-4">
+            <div class="card h-100">
+                <img src="https://via.placeholder.com/350x200" class="card-img-top" alt="Feature 1">
+                <div class="card-body">
+                    <h5 class="card-title">Feature One</h5>
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card h-100">
+                <img src="https://via.placeholder.com/350x200" class="card-img-top" alt="Feature 2">
+                <div class="card-body">
+                    <h5 class="card-title">Feature Two</h5>
+                    <p class="card-text">Curabitur vel ligula sit amet lacus cursus facilisis.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card h-100">
+                <img src="https://via.placeholder.com/350x200" class="card-img-top" alt="Feature 3">
+                <div class="card-body">
+                    <h5 class="card-title">Feature Three</h5>
+                    <p class="card-text">Phasellus fermentum justo et risus vehicula, vitae feugiat eros pharetra.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
