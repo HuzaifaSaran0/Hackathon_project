@@ -2,6 +2,8 @@ from django.shortcuts import render
 
 import requests
 from bs4 import BeautifulSoup
+import logging
+
 
 # DEFAULT_IMAGE = "https://cdn.vectorstock.com/i/500p/65/30/default-image-icon-missing-picture-page-vector-40546530.jpg"
 
@@ -19,6 +21,13 @@ def signup(request):
 
 def about(request):
     return render(request, 'about.html')
+
+
+logger = logging.getLogger(__name__)
+
+def custom_404_view(request, exception):
+    logger.warning(f"Page not found: {request.path}")
+    return render(request, '404.html', {'path': request.path}, status=404)
 
 
 # List of blog websites to scrape

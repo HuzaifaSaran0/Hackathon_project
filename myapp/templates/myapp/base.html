@@ -13,9 +13,13 @@
             flex-direction: column;
             min-height: 100vh;
         }
+        .beg {
+            background-color: #0b2103;
+            height: 5rem;
+        }
         footer {
             margin-top: auto;
-            background-color: #343a40;
+            background-color: #0b2103;
             color: white;
             padding: 10px 0;
         }
@@ -26,6 +30,10 @@
         footer a:hover {
             color: #fff;
         }
+        #navbarNav a {
+            color: white;
+            font-size: large;
+        }
         </style>
         {% endblock %}
 
@@ -33,7 +41,7 @@
 </head>
 <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark beg">
         <div class="container">
             <a class="navbar-brand" href="#"><b>AgriRises</b></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
